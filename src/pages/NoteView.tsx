@@ -1,4 +1,3 @@
-import React from 'react'
 import { useNote } from '../components/NoteLayout'
 import { Col, Row, Stack, Badge, Button } from 'react-bootstrap'
 import { Link, useNavigate } from 'react-router-dom'

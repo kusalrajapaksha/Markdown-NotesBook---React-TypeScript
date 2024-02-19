@@ -1,4 +1,3 @@
-import React from 'react'
 import { Note } from '../customTypes/CustomTypes'
 import { Navigate, Outlet, useOutletContext, useParams } from 'react-router-dom'
 

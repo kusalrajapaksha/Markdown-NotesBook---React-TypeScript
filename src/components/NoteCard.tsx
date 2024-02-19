@@ -1,4 +1,3 @@
-import React from 'react'
 import { Tag } from '../customTypes/CustomTypes'
 import { Badge, Card, Stack } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
