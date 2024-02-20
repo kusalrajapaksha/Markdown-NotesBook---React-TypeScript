@@ -1,3 +1,4 @@
+import { Col, Row } from 'react-bootstrap'
 import NoteForm from '../components/NoteForm'
 import { useNote } from '../components/NoteLayout'
 import { NoteData, Tag } from '../customTypes/CustomTypes'
@@ -14,7 +15,12 @@ function EditNote({onSubmit, onAddTag, availableTags} : EditNoteProps) {
 
   return (
     <>
-        <h1 className='mb-4'>Edit Note</h1>
+      <Row className='align-items-center mb-4'  style={{backgroundColor: "#383E40", borderRadius: 10, boxShadow: "0 5px 5px 0 rgba(0, 0, 0, 0.2)", color: "#bdd4e7"}}>
+        <Col style={{marginTop: 15}}>
+          <h1>Edit Note</h1>
+        </Col>
+      </Row>
+        
         <NoteForm 
           title = {note.title}
           markdown = {note.markdown}

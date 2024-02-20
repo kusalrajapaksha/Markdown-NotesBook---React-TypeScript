@@ -6,6 +6,8 @@ import { Note, Tag } from '../customTypes/CustomTypes'
 import NoteCard from '../components/NoteCard'
 import EditTagsModal from '../components/EditTagsModal'
 
+import editNote from '../assets/edit.png'
+
 type NoteListProps = {
     availableTags: Tag[]
     notes: Note[]
@@ -28,8 +30,15 @@ function NoteList({availableTags, notes, onDeleteTag, onUpdateTag} : NoteListPro
     
   return (
     <>
-    <Row className='align-items-center mb-4'>
-        <Col><h1>Notes</h1></Col>
+    <Row className='align-items-center mb-4' style={{backgroundColor: "#383E40", borderRadius: 10, boxShadow: "0 5px 5px 0 rgba(0, 0, 0, 0.2)", color: "#bdd4e7"}}>
+        <Col style={{marginTop: 15}}>
+    
+            <Stack direction='horizontal' className='align-items-center'>
+                <h1>Markdown NoteBook</h1>
+                <img src={editNote} alt="Icon" style={{ marginBottom: 15, marginLeft: '20px', width: 40, filter: "invert(100%)" }} />
+            </Stack> 
+            
+        </Col>
         <Col xs='auto'>
             <Stack gap={2} direction='horizontal'>
                 <Link to={'/new'}>
@@ -49,7 +58,7 @@ function NoteList({availableTags, notes, onDeleteTag, onUpdateTag} : NoteListPro
         <Row className='mb-4'>
             <Col>
                 <Form.Group controlId='title'>
-                    <Form.Label>Title</Form.Label>
+                    <Form.Label style={{color:"#bdd4e7"}}>Title</Form.Label>
                     <Form.Control 
                         type='text'
                         value={title}
@@ -60,7 +69,7 @@ function NoteList({availableTags, notes, onDeleteTag, onUpdateTag} : NoteListPro
 
             <Col>
             <Form.Group controlId='tags'>
-                        <Form.Label>Tags</Form.Label>
+                        <Form.Label style={{color:"#bdd4e7"}}>Tags</Form.Label>
                         <ReactSelect 
                             isMulti 
 

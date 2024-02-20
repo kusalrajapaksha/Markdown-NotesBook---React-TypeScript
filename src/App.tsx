@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import { Container } from 'react-bootstrap';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import {v4 as uuidV4} from 'uuid'
@@ -11,6 +11,7 @@ import { useLocalStorage } from './hooks/useLocalStorage';
 import NoteLayout from './components/NoteLayout';
 import NoteView from './pages/NoteView';
 import EditNote from './pages/EditNote';
+import { dummyNotes, dummyTags } from './data/data';
 
 
 function App() {
@@ -18,6 +19,17 @@ function App() {
   const [notes, setNotes] = useLocalStorage<RawNote[]>('NOTES', [])
   // Global tags list
   const [tags, setTags] = useLocalStorage<Tag[]>('TAGS', []) 
+
+  // Setting some dummy values
+  useEffect(() => {
+    setNotes(dummyNotes)
+    setTags(dummyTags)
+
+    return () => {
+      setNotes([])
+      setTags([])
+    }
+  }, [])
 
   const notesWithTags = useMemo(() => {
     return notes.map(note => {

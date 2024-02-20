@@ -38,13 +38,13 @@ function NoteForm({onSubmit, onAddTag, availableTags, title = "", markdown = "",
             <Row>
                 <Col>
                     <Form.Group controlId='title'>
-                        <Form.Label>Title</Form.Label>
+                        <Form.Label style={{color:"#bdd4e7"}}>Title</Form.Label>
                         <Form.Control required ref={titleRef} defaultValue={title}/>
                     </Form.Group>
                 </Col>
                 <Col>
                     <Form.Group controlId='tags'>
-                        <Form.Label>Tags</Form.Label>
+                        <Form.Label style={{color:"#bdd4e7"}}>Tags</Form.Label>
                         <CreatableReactSelect 
                             isMulti 
                             value={selectedTags.map(tag => {
@@ -74,7 +74,7 @@ function NoteForm({onSubmit, onAddTag, availableTags, title = "", markdown = "",
                 </Col>
             </Row>
             <Form.Group controlId='markdown'>
-                <Form.Label>Body</Form.Label>
+                <Form.Label style={{color:"#bdd4e7"}}>Body</Form.Label>
                 <Form.Control defaultValue={markdown} required as='textarea' rows={15} ref={markdownRef}/>
             </Form.Group>
             <Stack direction='horizontal' gap={2} className='justify-content-end'>

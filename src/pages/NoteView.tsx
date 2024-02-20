@@ -14,18 +14,10 @@ function NoteView({onDeleteNote}: NoteViewProps) {
 
   return (
     <>
-        <Row className='align-items-center mb-4'>
-            <Col>
+        <Row className='align-items-center mb-4' 
+        style={{backgroundColor: "#383E40", borderRadius: 10, boxShadow: "0 5px 5px 0 rgba(0, 0, 0, 0.2)", color: "#bdd4e7"}}>
+            <Col style={{marginTop: 15}}>
                 <h1>{note.title}</h1>
-                <Stack>
-                    {note.tags.length > 0 && (
-                        <Stack gap={1} direction='horizontal' className='flex-wrap'>
-                            {note.tags.map(tag => (
-                                <Badge className='text-truncate' key={tag.id}>{tag.label}</Badge>
-                            ))}
-                        </Stack>
-                    )}
-                </Stack>
             </Col>
 
             <Col xs='auto'>
@@ -50,9 +42,24 @@ function NoteView({onDeleteNote}: NoteViewProps) {
              </Col>
         </Row>
 
-        <ReactMarkdown>
-            {note.markdown}
-        </ReactMarkdown>
+        <Row className='align-items-center mb-4'>
+            <Stack>
+                {note.tags.length > 0 && (
+                    <Stack gap={1} direction='horizontal' className='flex-wrap'>
+                        {note.tags.map(tag => (
+                            <Badge className='text-truncate' key={tag.id}>{tag.label}</Badge>
+                        ))}
+                    </Stack>
+                )}     
+            </Stack>
+        </Row>
+            
+        <div style={{background: "white", height: "full", padding: 10, borderRadius: 5 , display: "flex", flexDirection: "column", flex: 1}}>
+            <ReactMarkdown>
+                {note.markdown}
+            </ReactMarkdown>    
+        </div>
+        
         
     </>
   )

@@ -11,12 +11,12 @@ type EditTagsModalProps = {
 
 function EditTagsModal({availableTags, show, handleClose, onDelete, onUpdate} : EditTagsModalProps) {
   return (
-    <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
+    <Modal show={show} onHide={handleClose} >
+        <Modal.Header closeButton style={{backgroundColor: "#383E40", color: "#bdd4e7"}}>
             <Modal.Title>Edit Tags</Modal.Title>
         </Modal.Header>
 
-        <Modal.Body>
+        <Modal.Body style={{backgroundColor: "#212227"}}>
             <Form>
                 <Stack gap={2}>
                     {availableTags.map(tag => (
