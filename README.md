@@ -1,5 +1,8 @@
 # Markdown NotesBook - React.js + TypeScript ✍🏼 📓
 
+![Markdown NoteBook](https://github.com/kusalrajapaksha/Markdown-NotesBook---React-TypeScript/assets/72430450/dbb71277-fc80-4a49-83be-8236346641f2)
+
+
 Markdown NotesBook is a React application built with TypeScript that enables users to create, manage, and organize Markdown notes. It provides a simple and intuitive interface for writing and editing notes using Markdown syntax.
 
 ## 🟢 Features
@@ -25,3 +28,8 @@ Markdown NotesBook is a React application built with TypeScript that enables use
 You can access a live demo of Markdown NotesBook here.
 
 https://kusalrajapaksha.github.io/Markdown-NotesBook---React-TypeScript/
+
+![Untitled design (1)](https://github.com/kusalrajapaksha/Markdown-NotesBook---React-TypeScript/assets/72430450/0368003f-1769-47c4-bd32-03605644fa24)
+![Untitled design](https://github.com/kusalrajapaksha/Markdown-NotesBook---React-TypeScript/assets/72430450/e9048dad-e7b0-4a95-8883-cd015d2c5009)
+
+
